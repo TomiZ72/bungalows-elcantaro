@@ -40,3 +40,4 @@ const bungalowsData = [
         smokingAllowed: false,
     },
 ]
+export { bungalowsData }
