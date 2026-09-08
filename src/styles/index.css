@@ -1,0 +1,31 @@
+:root {
+  /* Verdes naturales */
+  --color-green-900: #173b32;
+  --color-green-700: #2f6754;
+  --color-green-500: #5a8f63;
+  --color-green-300: #a9c5a7;
+  --color-green-100: #e8f1e8;
+
+  /* Colores complementarios */
+  --color-water: #2f7e87;
+  --color-sand: #d8c8a8;
+  --color-cream: #f7f4ea;
+
+  /* Colores neutros */
+  --color-white: #ffffff;
+  --color-text: #21312b;
+  --color-text-muted: #66736d;
+  --color-border: #cad8ce;
+
+  /* Variables según su función */
+  --color-primary: var(--color-green-700);
+  --color-primary-dark: var(--color-green-900);
+  --color-primary-light: var(--color-green-100);
+  --color-secondary: var(--color-water);
+  --color-accent: var(--color-sand);
+
+  --color-background: var(--color-cream);
+  --color-surface: var(--color-white);
+
+  --color-overlay: rgba(23, 59, 50, 0.55);
+}
