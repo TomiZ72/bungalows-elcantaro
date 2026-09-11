@@ -1,9 +1,25 @@
+import baños from '../assets/bungalowsImg/baños.jpg'
+import cocina from '../assets/bungalowsImg/cocina.jpg'
+import caturve from '../assets/bungalowsImg/caturve.jpg'
+import interior from '../assets/bungalowsImg/interior.jpg'
+import living from '../assets/bungalowsImg/living.jpg'
+
+const bungalowsImg = {
+    images: [
+        { src: baños, alt: 'Baño' },
+        { src: cocina, alt: 'Cocina' },
+        { src: caturve, alt: 'Caturve' },
+        { src: interior, alt: 'Interior' },
+        { src: living, alt: 'Living' }
+    ]
+};
+
 const bungalowsData = [
     {
         id: 1,
         name: 'Apartamento de un dormitorio',
         description: 'Un espacio cómodo y acogedor para descansar, desconectar de la rutina y disfrutar de Villa Elisa a tu ritmo. Tu lugar para hacer una pausa y sentirte bien.',
-        image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/871961099.jpg?k=16fb92f73f4c651e29fa65ae85f2f52c21faf29a29f77d0326f78fe0e4c1a7b1&o=',
+        image: bungalowsImg,
         capacity: 4,
         singlebed: 0,
         doubleBed: 1,
@@ -16,7 +32,7 @@ const bungalowsData = [
         id: 2,
         name: 'Bungalow 1',
         description: 'Un espacio cómodo y acogedor para descansar, desconectar de la rutina y disfrutar de Villa Elisa a tu ritmo. Tu lugar para hacer una pausa y sentirte bien.',
-        image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/871961099.jpg?k=16fb92f73f4c651e29fa65ae85f2f52c21faf29a29f77d0326f78fe0e4c1a7b1&o=',
+        image: bungalowsImg,
         capacity: 4,
         singlebed: 0,
         doubleBed: 3,
@@ -30,7 +46,7 @@ const bungalowsData = [
         id: 3,
         name: 'Bungalow 2',
         description: 'Un espacio cómodo y acogedor para descansar, desconectar de la rutina y disfrutar de Villa Elisa a tu ritmo. Tu lugar para hacer una pausa y sentirte bien.',
-        image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/871961099.jpg?k=16fb92f73f4c651e29fa65ae85f2f52c21faf29a29f77d0326f78fe0e4c1a7b1&o=',
+        image: bungalowsImg,
         capacity: 4,
         singlebed: 0,
         doubleBed: 3,
@@ -40,4 +56,4 @@ const bungalowsData = [
         smokingAllowed: false,
     },
 ]
-export { bungalowsData }
+export { bungalowsData, bungalowsImg }

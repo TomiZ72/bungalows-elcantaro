@@ -1,12 +1,15 @@
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../assets/logoElCantaro.png'
 const Header = () => {
     return (
         <header className="site-header">
             <div className="header-container">
-                <Link to="/" className="header-brand">
-                    "El Cántaro"
-                    <span>Villa Elisa</span>
-                </Link>
+                <div className="logo-container">
+                    <Link to="/" className="header-brand">
+                        <img src={logo} alt="Logo de El Cántaro" className="header-logo" />
+
+                    </Link>
+                </div>
 
                 <nav className="header-nav" aria-label="Navegación principal">
                     <NavLink to="/" end className="header-link">
