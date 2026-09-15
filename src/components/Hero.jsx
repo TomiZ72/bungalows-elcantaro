@@ -38,18 +38,6 @@ const Hero = ({ images = [], description, location }) => {
         };
     }, []);
 
-    const backgroundStyle = {
-        transform: `
-      translateY(${scrollProgress * 70}px)
-      scale(${1.05 + scrollProgress * 0.05})
-    `,
-        filter: `blur(${scrollProgress * 3}px)`,
-    };
-
-    const contentStyle = {
-        transform: `translateY(${scrollProgress * 100}px)`,
-        opacity: Math.max(1 - scrollProgress * 1.3, 0),
-    };
 
     return (
         <section className="hero" aria-labelledby="hero-title">

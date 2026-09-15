@@ -17,18 +17,19 @@ const IntroSection = () => {
                 <div className="intro-highlights">
                     <article className="highlight">
                         <strong>Hasta 4</strong>
-                        <span>huéspedes</span>
+                        <span>Huéspedes</span>
                     </article>
 
                     <article className="highlight">
                         <strong>Pet friendly</strong>
-                        <span>mascotas bienvenidas</span>
+                        <span>Mascotas bienvenidas</span>
                     </article>
 
                     <article className="highlight">
                         <strong>Villa Elisa</strong>
                         <span>Entre Ríos</span>
                     </article>
+
                 </div>
             </div>
         </section>
