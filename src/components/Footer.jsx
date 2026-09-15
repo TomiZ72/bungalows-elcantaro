@@ -58,7 +58,7 @@ const Footer = () => {
                             className="footer-button"
                         >
                             Consultar disponibilidad
-                            <span aria-hidden="true">↗</span>
+
                         </Link>
 
                         <span className="footer-location">
