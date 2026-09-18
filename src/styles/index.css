@@ -75,7 +75,7 @@ select {
 }
 
 .site-header {
-  position: relative;
+  position: absolute;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -95,7 +95,8 @@ select {
   content: "";
   position: absolute;
   inset: 0 0 -70px;
-  z-index: -1;
+
+  z-index: 0;
   pointer-events: none;
 
   background: linear-gradient(to bottom,
@@ -105,12 +106,8 @@ select {
 }
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-inline: auto;
-  padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .logo-container {
@@ -223,6 +220,17 @@ select {
     outline-offset: 4px;
   }
 
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-container {
+    position: relative;
+    z-index: 1001;
+  }
+
   /* Navegación cerrada */
   /* Menú cerrado: desplazado hacia la izquierda */
   .header-nav {
@@ -235,7 +243,7 @@ select {
     top: 100%;
     left: 0;
     right: auto;
-    z-index: 10;
+    z-index: 1002;
 
     width: min(280px, calc(100vw - 2rem));
     box-sizing: border-box;
@@ -279,7 +287,7 @@ select {
     text-decoration: none;
   }
 
-  .header-nav .header-link:hover,
+
   .header-nav .header-link.active {
     background-color: var(--color-green-100);
   }
@@ -287,6 +295,12 @@ select {
   .header-nav .header-link:focus-visible {
     outline: 2px solid var(--color-green-700);
     outline-offset: 2px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .header-nav .header-link:hover {
+      background-color: var(--color-green-100);
+    }
   }
 }
 
@@ -965,6 +979,7 @@ select {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
+
 }
 
 .bungalow-card {
