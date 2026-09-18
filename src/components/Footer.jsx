@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="footer-brand">
                         <Link to="/" className="footer-logo">
                             El Cántaro
-                            <span>Bungalows · Villa Elisa</span>
+                            <span>Bungalows</span>
                         </Link>
 
                         <p>
@@ -19,31 +19,6 @@ const Footer = () => {
                             de Villa Elisa a tu ritmo.
                         </p>
                     </div>
-
-                    <nav
-                        className="footer-nav"
-                        aria-label="Navegación del pie de página"
-                    >
-
-
-                        <ul>
-                            <li>
-                                <Link to="/">Inicio</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/bungalows">
-                                    Bungalows
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link to="/contacto">
-                                    Contacto
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
 
                     <div className="footer-contact">
                         <h2>Planificá tu estadía</h2>
