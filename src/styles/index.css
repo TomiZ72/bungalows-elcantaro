@@ -276,7 +276,7 @@ select {
 
     box-sizing: border-box;
 
-    background: rgba(47, 103, 84, 0.18);
+    background: rgba(46, 117, 94, 0.18);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -286,7 +286,7 @@ select {
 
     border-radius: 0 18px 18px 0;
 
-    box-shadow: 8px 12px 24px rgba(23, 59, 50, 0.12);
+    box-shadow: 8px 12px 24px rgba(28, 75, 63, 0.12);
 
     transform: translateX(-100%);
     opacity: 0;
@@ -1161,87 +1161,88 @@ select {
     transform: scale(1.03);
     box-shadow: 0 12px 30px rgba(23, 59, 50, 0.15);
   }
+}
 
-  @media (max-width: 600px) {
-    .bungalows-section {
-      padding: 3rem 1rem;
-    }
-
-    .bungalows-heading {
-      margin-bottom: 1.75rem;
-    }
-
-    .bungalows-heading h2 {
-      margin-bottom: 0.75rem;
-      font-size: clamp(1.75rem, 6vw, 2.25rem);
-      line-height: 1.2;
-      text-wrap: balance;
-    }
-
-    .bungalows-heading p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .bungalows-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 0;
-
-      isolation: isolate;
-      padding-bottom: 28px;
-    }
-
-    .bungalow-card {
-      /* Todas ocupan la misma celda */
-      grid-area: 1 / 1;
-      z-index: var(--stack-order);
-
-      transform-origin: center bottom;
-
-      transform:
-        translateY(calc(var(--stack-position) * 12px)) scale(calc(1 - var(--stack-position) * 0.04));
-
-      visibility: hidden;
-      pointer-events: none;
-    }
+@media (max-width: 600px) {
+  .bungalows-section {
+    padding: 3rem 1rem;
   }
 
-  /* Conserva la silueta de las tarjetas posteriores */
-  .bungalow-card::after {
-    content: "";
+  .bungalows-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .bungalows-heading h2 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .bungalows-heading p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .bungalows-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+
+    isolation: isolate;
+    padding-bottom: 28px;
+  }
+
+  .bungalow-card {
+    /* Todas ocupan la misma celda */
     grid-area: 1 / 1;
-  }
+    z-index: var(--stack-order);
 
-  .bungalow-card.is-front {
-    visibility: visible;
-    pointer-events: auto;
-  }
+    transform-origin: center bottom;
 
-  .bungalows-stack-controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    transform:
+      translateY(calc(var(--stack-position) * 12px)) scale(calc(1 - var(--stack-position) * 0.04));
 
-    margin-top: 1rem;
-    color: var(--color-green-900);
-  }
-
-  .bungalows-stack-controls button {
-    min-height: 44px;
-    padding: 0.75rem 1rem;
-
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
-
-    background: var(--color-green-100);
-    color: var(--color-green-900);
-    font: inherit;
-    cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
+
+/* Conserva la silueta de las tarjetas posteriores */
+.bungalow-card::after {
+  content: "";
+  grid-area: 1 / 1;
+}
+
+.bungalow-card.is-front {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.bungalows-stack-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 1rem;
+  color: var(--color-green-900);
+}
+
+.bungalows-stack-controls button {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  background: var(--color-green-100);
+  color: var(--color-green-900);
+  font: inherit;
+  cursor: pointer;
+}
+
 
 .tourism-section {
   padding: clamp(3rem, 6vw, 6rem) 1rem;
