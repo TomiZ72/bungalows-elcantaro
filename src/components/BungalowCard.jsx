@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useRef, useState } from "react";
+import { WhatsAppButton } from './WhatsappButton';
 
 
 
@@ -121,12 +122,8 @@ const BungalowCard = ({ bungalows }) => {
                                         </span>
                                     </div>
 
-                                    <Link
-                                        to="/contacto"
-                                        className="bungalow-button"
-                                    >
-                                        Consultar disponibilidad
-                                    </Link>
+                                    <WhatsAppButton className="bungalow-button"
+                                        message={`¡Hola! Quisiera consultar disponibilidad para ${bungalow.name}.`} />
                                 </div>
                             </article>
                         );
