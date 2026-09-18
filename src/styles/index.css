@@ -4,20 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  display: block;
-}
 
-#root,
-main {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
 
 :root {
+  /* Tipografias*/
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", sans-serif;
   /* Verdes naturales */
   --color-green-900: #173b32;
   --color-green-700: #2f6754;
@@ -47,6 +39,35 @@ main {
   --color-surface: var(--color-white);
 
   --color-overlay: rgba(23, 59, 50, 0.55);
+}
+
+#root,
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 .menu-toggle {
@@ -688,6 +709,8 @@ main {
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4);
   margin-top: 3rem;
   padding: 2.5rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: bold;
   color: var(--color-green-700);
   background: var(--color-green-100);
   border-radius: 18px;
@@ -1285,7 +1308,7 @@ main {
 .tourism-card-link {
   display: flex;
   flex-direction: column;
-
+  position: relative;
   width: 100%;
   overflow: hidden;
 
@@ -1404,6 +1427,8 @@ main {
 
 .tourism-sr-only {
   position: absolute;
+  top: 0;
+  left: 0;
 
   width: 1px;
   height: 1px;
