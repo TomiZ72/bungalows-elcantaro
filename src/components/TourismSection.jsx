@@ -28,6 +28,7 @@ const TourismSection = ({ places }) => {
 
     return (
         <section
+            id="tourism"
             className="tourism-section"
             aria-labelledby="tourism-title"
         >

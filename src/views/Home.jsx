@@ -32,7 +32,7 @@ const Home = () => {
                 description={complexData.description}
                 location={`${complexData.location.city}, ${complexData.location.province}`}
             />
-            <IntroSection />
+            <IntroSection images={heroImages} />
             <BungalowCard bungalows={bungalowsData} />
             <LocationSection />
             <TourismSection places={tourismData} />

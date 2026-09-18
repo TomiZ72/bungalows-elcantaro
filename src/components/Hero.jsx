@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const Hero = ({ images = [], description, location }) => {
-    const [scrollProgress, setScrollProgress] = useState(0);
+import { WhatsAppButton } from './WhatsappButton';
+
+const Hero = ({ images = [], location }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const imageCount = images.length;
@@ -20,23 +21,6 @@ const Hero = ({ images = [], description, location }) => {
 
         return () => clearInterval(intervalId);
     }, [imageCount]);
-    useEffect(() => {
-        const handleScroll = () => {
-            const progress = Math.min(window.scrollY / window.innerHeight, 1);
-
-            setScrollProgress(progress);
-        };
-
-        window.addEventListener("scroll", handleScroll, {
-            passive: true,
-        });
-
-        handleScroll();
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
 
     return (
@@ -60,8 +44,6 @@ const Hero = ({ images = [], description, location }) => {
                 <h1 id="hero-title">
                     Tu lugar para hacer una pausa
                 </h1>
-
-                <p className="hero-description">{description}</p>
             </div>
 
             <div className="hero-actions">
@@ -69,9 +51,7 @@ const Hero = ({ images = [], description, location }) => {
                     Ver alojamientos
                 </Link>
 
-                <Link to="/contacto" className="hero-button">
-                    Consultar disponibilidad
-                </Link>
+                <WhatsAppButton className="hero-button" />
             </div>
         </section>
     );

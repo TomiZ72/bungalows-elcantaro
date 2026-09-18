@@ -5,7 +5,7 @@ import { Bungalows } from './views/Bungalows.jsx'
 import { Contact } from './views/Contact.jsx'
 import { NotFound } from './views/NotFound.jsx'
 import { Header } from './components/Header.jsx'
-import { Hero } from './components/Hero.jsx'
+
 
 const App = () => {
   return (

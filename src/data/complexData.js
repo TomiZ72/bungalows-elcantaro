@@ -31,7 +31,10 @@ const complexImg = {
             alt: 'Juegos'
         },
     ]
+
 };
+
+
 
 const complexData = {
     description:
